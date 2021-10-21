@@ -4,6 +4,7 @@ function Cart(props) {
     return (
         <div className = "Cart">
             <div className = "topContent">
+                <div className = "title">{props.title}</div>
                 <div className = "imagediv"> 
                 <img className="image" src= {props.imageUrl}/>
                 </div>

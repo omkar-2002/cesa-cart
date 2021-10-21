@@ -39,17 +39,37 @@
 }
 
 .Total{
-    border-width: 5px;
-    border-top: grey;
+    border: solid;
+    border-width: 3px;
+   border-color: black;
     display: flex;
     justify-content: space-between;
+    padding: 0px 10px;
+    color: white;
 }
 
 .header{
     display: flex;
     flex-direction: row;
-    padding: 20px;
+    margin-top: 50px;
+    padding: 10px;
     justify-content: space-between;
     align-items: center;
     justify-content: center;
+}
+
+.cartitem{
+    border: solid;
+   border-width: 2px;
+   border-color: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0px;
+    padding: 0px 10px;
+}
+
+.itemheading{
+    display: grid;
+   grid-template-columns: 50% 50%;
 }

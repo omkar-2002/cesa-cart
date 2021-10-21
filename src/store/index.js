@@ -2,7 +2,7 @@ import { createStore } from "redux";
 import PRODUCTS from "../dummy_data/ProductData"
 
 
-const  counterReducer = (state= {  products: PRODUCTS, carts: []},action) =>{
+const  counterReducer = (state= {  products: PRODUCTS},action) =>{
     
     if(action.type == "increment"){
   const index =  state.products.findIndex(item => item.id == action.id)
@@ -15,7 +15,8 @@ count: item.count + 1
    } 
       return {
           ...state,
-          products: updatedproductlist
+          products: updatedproductlist,
+        
       }  
     } if(action.type == "decrement"){
         const index =  state.products.findIndex(item => item.id == action.id)
@@ -29,6 +30,20 @@ count: item.count + 1
            return {
                ...state,
                products: updatedproductlist
+           }
+    }if(action.type == 'addTocart'){
+        const index =  state.products.findIndex(item => item.id == action.id)
+        let item = state.products[index];
+        let updatedproductlist = [...state.products]
+     
+        updatedproductlist[index] = {
+     ...item,
+     count: item.count + 1
+        } 
+           return {
+               ...state,
+               products: updatedproductlist,
+              
            }
     }
     return state
