@@ -12,11 +12,7 @@ const Home = (props) => {
   const incrementHandler = (id) => {
     dispatch({ type: "increment", id: id });
     let index = updatedProduct.findIndex((item) => item.id == id);
-    let item = updatedProduct[index];
-    if(item.count == 1){
-      dispatch({type:"addTocart",id: id})
-    }
-    console.log(cart);
+   
   };
   const decrementHandler = (id) => {
     let index = updatedProduct.findIndex((item) => item.id == id);
