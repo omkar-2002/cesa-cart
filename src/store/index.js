@@ -31,21 +31,8 @@ count: item.count + 1
                ...state,
                products: updatedproductlist
            }
-    }if(action.type == 'addTocart'){
-        const index =  state.products.findIndex(item => item.id == action.id)
-        let item = state.products[index];
-        let updatedproductlist = [...state.products]
-     
-        updatedproductlist[index] = {
-     ...item,
-     count: item.count + 1
-        } 
-           return {
-               ...state,
-               products: updatedproductlist,
-              
-           }
     }
+    
     return state
 }
 
